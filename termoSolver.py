@@ -3,6 +3,10 @@ from flask import Flask, render_template, request, jsonify, g
 
 app = Flask(__name__)
 
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.ico', mimetype='static/logo.png')
+
 DATABASE = 'words.db'
 
 def get_db():
@@ -70,4 +74,4 @@ def solveWordle():
     return useDB(lambda cur: solveSingleWord(request.json, 'english_words', cur))
     
 
-app.run(debug=True, host='0.0.0.0')
+app.run()
