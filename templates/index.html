@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+
+<form class="termoForm" action="javascript: solveTermo()" method="post">
+    <div class="termoFormLetters">
+        <input id="termo1" maxlength="1" type="text">
+        <input id="termo2" maxlength="1" type="text">
+        <input id="termo3" maxlength="1" type="text">
+        <input id="termo4" maxlength="1" type="text">
+        <input id="termo5" maxlength="1" type="text">
+    </div>
+    <div class="termoFormRestrictions">
+        <div>
+            <label for="">Contém: </label>
+            <input id="termoContains" maxlength="5" type="text">
+        </div>
+        <div>
+            <label for="">Não Contém: </label>
+            <input id="termoNotContains" type="text">
+        </div>
+    </div>
+    <input class="termoFormSubmit" type="submit" value="Buscar">
+    
+    <div id="termoResults" class="termoResults">
+
+    </div>
+</form>
+
+
+{% endblock %}

@@ -1,0 +1,154 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+body {
+    background-color: #3d4953;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+.header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 7px 25px;
+    background-color: rgb(36, 36, 36);
+	margin-bottom: 25px;
+}
+.header a{
+    color: #FFF;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: sans-serif;
+}
+
+.termoForm{
+    background-color: rgb(36, 36, 36);
+	display: flex;
+	flex-direction: column;
+	justify-self: center;
+	align-self: center;
+	padding: 35px;
+	border-radius: 15px;
+	margin: auto auto;
+	gap: 20px;
+}
+.termoFormTitle{
+	text-align: center;
+	color: #FFF;
+	font-family: sans-serif;
+	font-size: 30pt;
+	margin-bottom: 25px;
+}
+.termoFormLetters{
+	display: flex;
+	gap: 15px;
+}
+.termoFormLetters input{
+	all: unset;
+	width: 75px;
+	height: 75px;
+	background-color: #3d4953;
+	border-radius: 10px;
+	color: white;
+	font-size: 34pt;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: sans-serif;
+}
+.termoFormRestrictions{
+	display: flex;
+	justify-content: space-between;
+}
+.termoFormRestrictions div{
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+.termoFormRestrictions div label{
+	color: #FFF;
+	font-family: sans-serif;
+	font-weight: bold;
+}
+.termoFormRestrictions div input{
+	all: unset;
+	color: #FFF;
+	font-family: sans-serif;
+	background-color: #3d4953;
+	padding: 7px;
+	text-transform: uppercase;
+	border-radius: 3px;
+}
+.termoFormSubmit{
+	all: unset;
+	background-color: #3d4953;
+	padding: 10px;
+	text-align: center;
+	color: #FFF;
+	text-transform: uppercase;
+	font-family: sans-serif;
+	font-weight: bold;
+	border-radius: 5px;
+	cursor: pointer;
+}
+.termoResults{
+	align-self: center;
+	justify-self: baseline;
+	margin-top: 25px;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	justify-content: center;
+	align-items: center;
+	gap: 20px;
+	max-width: 75vw;
+	background-color: rgb(36, 36, 36);
+	text-align: center;
+}
+.termoResults p{
+	color: #FFF;
+	text-transform: uppercase;
+	font-family: sans-serif;
+	font-size: 20pt;
+}

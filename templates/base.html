@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>TermoSolver{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <header class="header">
+        <a href="/termo">Termo</a>
+        <a href="">Dueto</a>
+        <a href="/"><img src="{{ url_for('static', filename='logo.png') }}" alt="TermoSolver"></a>
+        <a href="">Quarteto</a>
+        <a href="/wordle">Wordle</a>
+    </header>
+    {% block content %}{% endblock %}
+</body>
+<script src="{{ url_for('static', filename='jquery.js') }}"></script>
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</html>
