@@ -1,1 +1,1 @@
-web: gunicorn termoSolver:app --log-file -
+web: gunicorn termoSolver:app
