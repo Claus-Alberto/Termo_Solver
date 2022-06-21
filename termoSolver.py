@@ -48,6 +48,10 @@ def close_connection(exception):
     db = getattr(g, '_database', None)
     if db is not None:
         db.close()
+        
+@app.route("/")
+def termo():
+    return render_template('termo.html')
 
 @app.route("/termo")
 def termo():
