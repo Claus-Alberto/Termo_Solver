@@ -1,12 +1,8 @@
 import sqlite3
-from flask import Flask, render_template, request, jsonify, g
+from flask import Flask, render_template, request, jsonify, g, send_from_directory
 import os
 
 app = Flask(__name__)
-
-@app.route('/favicon.ico')
-def favicon():
-    return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.ico', mimetype='static/logo.png')
 
 DATABASE = 'words.db'
 
@@ -53,11 +49,12 @@ def close_connection(exception):
     db = getattr(g, '_database', None)
     if db is not None:
         db.close()
+
+@app.route('/favicon.ico')
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.ico', mimetype='image/favicon.png')
         
 @app.route("/")
-def termo():
-    return render_template('termo.html')
-
 @app.route("/termo")
 def termo():
     return render_template('termo.html')
@@ -75,4 +72,4 @@ def solveWordle():
     return useDB(lambda cur: solveSingleWord(request.json, 'english_words', cur))
     
 
-app.run()
+app.run(debug=True)
