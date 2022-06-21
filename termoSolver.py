@@ -72,4 +72,4 @@ def solveWordle():
     return useDB(lambda cur: solveSingleWord(request.json, 'english_words', cur))
     
 
-app.run(debug=True, host='0.0.0.0', port=80)
+app.run()
